@@ -1,81 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Maharat Group | Engineering & Industrial Solutions in Qatar</title>
-    <style>
-        :root {
-            --primary: #0f172a;
-            --accent: #d97706;
-            --light: #f8fafc;
-            --text: #334155;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background-color: var(--light); color: var(--text); line-height: 1.6; }
-        header { background: var(--primary); color: white; padding: 2rem 1rem; text-align: center; border-bottom: 4px solid var(--accent); }
-        header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
-        header p { color: #94a3b8; font-size: 1.1rem; }
-        .container { max-width: 1100px; margin: 3rem auto; padding: 0 1.5rem; }
-        .intro { text-align: center; margin-bottom: 3rem; }
-        .intro h2 { color: var(--primary); font-size: 1.8rem; margin-bottom: 1rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 3px solid var(--accent); }
-        .card h3 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.25rem; }
-        .card p { font-size: 0.95rem; color: #64748b; }
-        footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 3rem 1rem; margin-top: 4rem; }
-        footer a { color: var(--accent); text-decoration: none; }
-        .contact-box { background: white; padding: 2rem; border-radius: 8px; text-align: center; margin-top: 3rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        .contact-box a.btn { display: inline-block; background: var(--accent); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; margin-top: 1rem; text-decoration: none; font-weight: bold; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Maharat Al Alamiya | Architectural Fabrication, Trading & Construction in Qatar</title>
+  <meta name="description" content="Al Maharat Al Alamiya delivers integrated aluminum, uPVC, architectural glass, steel fabrication, carpentry, painting, and construction solutions across Qatar since 2012.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Al Maharat Group</h1>
-        <p>Comprehensive Industrial, Construction & Fabrication Solutions in Doha, Qatar</p>
-    </header>
-
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
     <div class="container">
-        <div class="intro">
-            <h2>Our Core Divisions</h2>
-            <p>Unified under a single standard of excellence, quality craftsmanship, and reliable execution.</p>
-        </div>
-
-        <div class="grid">
-            <div class="card">
-                <h3>Al Maharat Construction</h3>
-                <p>Executing professional structural contracting, civil works, and comprehensive building development across Qatar.</p>
-            </div>
-            <div class="card">
-                <h3>Skills uPVC & Aluminum Trading</h3>
-                <p>Sourcing and supplying premium-grade materials and architectural components for commercial projects.</p>
-            </div>
-            <div class="card">
-                <h3>Skills Aluminum Fabrication</h3>
-                <p>Precision fabrication of custom architectural aluminum systems, windows, doors, and cladding solutions.</p>
-            </div>
-            <div class="card">
-                <h3>Blacksmith Art (Steel Fabrication)</h3>
-                <p>Heavy and ornamental steel fabrication, structural metalwork, gates, and custom industrial steel solutions.</p>
-            </div>
-            <div class="card">
-                <h3>European Art (Carpentry)</h3>
-                <p>High-end architectural woodwork, custom joinery, bespoke furniture, and specialized interior carpentry.</p>
-            </div>
-        </div>
-
-        <div class="contact-box">
-            <h2>Get in Touch</h2>
-            <p>Looking for a reliable partner for your next project? Reach out to our team directly.</p>
-            <p style="margin-top: 1rem;"><strong>Email:</strong> info@almaharat.qa | <strong>Phone:</strong> +974 7192 6742</p>
-            <a href="mailto:info@almaharat.qa" class="btn">Contact Us via Email</a>
-        </div>
+      <div>Doha | Al Khor | Al Shamal — Serving All of Qatar</div>
+      <div>
+        <a href="tel:+97433713987">+974 3371 3987</a> &nbsp;|&nbsp;
+        <a href="mailto:info@almaharat.qa">info@almaharat.qa</a>
+      </div>
     </div>
+  </div>
 
-    <footer>
-        <p>&copy; 2026 Al Maharat Group. All rights reserved. Doha, Qatar.</p>
-    </footer>
+  <!-- Main Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.png" alt="Al Maharat Al Alamiya Logo" onerror="this.style.display='none'">
+        <div class="logo-text">
+          <span class="ar">المهارات العالمية</span>
+          <span class="en">Al Maharat Al Alamiya</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Capabilities & Divisions</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html" class="btn btn-primary">Request a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Established in Qatar Since 2012</span>
+        <h1>Integrated Architectural Fabrication, Trading &amp; Construction Across Qatar</h1>
+        <p>Delivering comprehensive building solutions—combining regional material trading, specialized manufacturing workshops, and precision site execution under one unified standard of excellence.</p>
+        <div class="hero-actions">
+          <a href="services.html" class="btn btn-primary">Explore Our Capabilities</a>
+          <a href="projects.html" class="btn btn-outline">View Project Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Strengths / Trust Strip -->
+  <section class="trust-strip">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <h3>Proven Track Record Since 2012</h3>
+        <p>Over 14 years of continuous delivery across landmark commercial, institutional, and residential developments in Qatar.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Nationwide Branch Network</h3>
+        <p>Strategic trading and supply hubs located in the Doha Industrial Area, Al Khor, and Al Shamal.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Dedicated Workshops &amp; Factories</h3>
+        <p>Specialized facilities for Aluminum, uPVC, Architectural Glass, Steel, Carpentry, and Industrial Painting.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Engineering &amp; Modern Visualization</h3>
+        <p>Backed by in-house engineering review and AI-assisted architectural visualization for precision execution.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Introduction -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle">Who We Are</span>
+        <h2>One Unified Partner From Material Supply to Final Handover</h2>
+        <p>Al Maharat Al Alamiya operates as a fully integrated building materials supplier, architectural fabricator, and contracting enterprise. By uniting regional wholesale trading branches with dedicated manufacturing workshops and specialized construction teams, we eliminate multi-vendor delays—ensuring seamless quality control, competitive pricing, and on-schedule delivery across Qatar.</p>
+      </div>
+
+      <!-- 6 Core Divisions Preview -->
+      <div class="grid-3">
+        <div class="card">
+          <span class="card-number">01 / TRADING &amp; SUPPLY</span>
+          <h3>Aluminum &amp; uPVC Trading</h3>
+          <p>Direct wholesale and retail supply of premium architectural profiles, European hardware, and accessories across our three regional branches.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-number">02 / FENESTRATION</span>
+          <h3>Aluminum &amp; uPVC Fabrication</h3>
+          <p>Custom engineering, manufacturing, and installation of thermal-break doors, windows, structural curtain walls, and modern kitchens.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-number">03 / ARCHITECTURAL GLAZING</span>
+          <h3>Glass Trading &amp; Processing</h3>
+          <p>High-performance single, double-glazed insulated units (IGUs), tempered safety glass, and custom architectural glazing fabrication.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-number">04 / METALWORKS</span>
+          <h3>Steel &amp; Wrought Iron Works</h3>
+          <p>Structural steel warehouses, bespoke entrance gates, laser-cut decorative mashrabiya panels, and architectural handrails.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-number">05 / BESPOKE WOODWORK</span>
+          <h3>Carpentry &amp; Joinery</h3>
+          <p>Solid wood and veneer doors, custom walk-in wardrobes, cabinetry, pergolas, and CNC-detailed interior decor.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-number">06 / CIVIL &amp; FINISHES</span>
+          <h3>Construction, Gypsum &amp; Painting</h3>
+          <p>Civil contracting, modern gypsum ceiling systems, decorative cladding, and industrial spray coatings for metal, wood, and buildings.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="services.html" class="btn btn-outline-dark">Explore All Seven Specialized Divisions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Planning a Commercial, Industrial, or Residential Project?</h2>
+      <p>Connect with our engineering and estimation team for material supply, custom fabrication, or complete contracting packages.</p>
+      <a href="contact.html" class="btn btn-outline">Contact Our Team Today</a>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Al Maharat Al Alamiya</h4>
+          <p style="font-size: 0.92rem; margin-bottom: 14px;">Integrated architectural fabrication, building materials trading, and construction enterprise serving Qatar since 2012.</p>
+          <p style="font-size: 0.9rem;"><strong>Head Office:</strong> Office 31, Building 81, Zone 53, Doha, Qatar</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us &amp; Vision</a></li>
+            <li><a href="services.html">Capabilities &amp; Divisions</a></li>
+            <li><a href="branches.html">Branches &amp; Workshops</a></li>
+            <li><a href="projects.html">Selected Projects</a></li>
+            <li><a href="contact.html">Request a Quotation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Core Divisions</h4>
+          <ul>
+            <li><a href="services.html">Aluminum &amp; uPVC Profiles Trading</a></li>
+            <li><a href="services.html">Aluminum &amp; uPVC Fabrication</a></li>
+            <li><a href="services.html">Glass Trading &amp; Fabrication Factory</a></li>
+            <li><a href="services.html">Steel &amp; Wrought Iron Workshop</a></li>
+            <li><a href="services.html">Carpentry, Painting &amp; Construction</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Information</h4>
+          <ul>
+            <li><strong>Phone / WhatsApp:</strong> <a href="tel:+97433713987">+974 3371 3987</a></li>
+            <li><strong>Email:</strong> <a href="mailto:info@almaharat.qa">info@almaharat.qa</a></li>
+            <li><strong>Website:</strong> www.almaharat.qa</li>
+            <li><strong>Hours:</strong> Sat – Thu: 8:00 AM – 6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Al Maharat Al Alamiya. All Rights Reserved.</span>
+        <span>Doha &bull; Al Khor &bull; Al Shamal &bull; Al Wukair</span>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
