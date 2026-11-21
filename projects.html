@@ -54,24 +54,93 @@
     </div>
   </section>
 
-  <!-- Project Showcase (Standalone Mixed Gallery) -->
+  <!-- Project Showcase (Folder-Wise Filterable Gallery) -->
   <section class="section">
     <div class="container">
       <div class="section-header">
         <span class="subtitle">Project Showcase</span>
         <h2>Selected Works &amp; Fabrication Highlights</h2>
-        <p>A curated gallery of mixed work highlights across our fabrication workshops, material supply, and site execution in Qatar.</p>
+        <p>Select a category below to browse completed installations, custom fabrication, and material supply across Qatar.</p>
       </div>
 
-      <div class="showcase-grid">
-        <div class="showcase-card"><img src="assets/showcase/photo-01.jpg" alt="Al Maharat Al Alamiya work showcase" loading="lazy"></div>
-        <div class="showcase-card"><img src="assets/showcase/photo-02.jpg" alt="Al Maharat Al Alamiya work showcase" loading="lazy"></div>
-        <div class="showcase-card"><img src="assets/showcase/photo-03.jpg" alt="Al Maharat Al Alamiya work showcase" loading="lazy"></div>
-        <div class="showcase-card"><img src="assets/showcase/photo-04.jpg" alt="Al Maharat Al Alamiya work showcase" loading="lazy"></div>
-        <div class="showcase-card"><img src="assets/showcase/photo-05.jpg" alt="Al Maharat Al Alamiya work showcase" loading="lazy"></div>
-        <div class="showcase-card"><img src="assets/showcase/photo-06.jpg" alt="Al Maharat Al Alamiya work showcase" loading="lazy"></div>
-        <div class="showcase-card"><img src="assets/showcase/photo-07.jpg" alt="Al Maharat Al Alamiya work showcase" loading="lazy"></div>
-        <div class="showcase-card"><img src="assets/showcase/photo-08.jpg" alt="Al Maharat Al Alamiya work showcase" loading="lazy"></div>
+      <!-- Category Filter Tabs -->
+      <div class="filter-bar" role="tablist" aria-label="Project Categories">
+        <button class="filter-btn active" data-filter="all">All Works</button>
+        <button class="filter-btn" data-filter="upvc-doors-windows">uPVC Doors &amp; Windows</button>
+        <button class="filter-btn" data-filter="aluminum-doors-windows">Aluminum Doors &amp; Windows</button>
+        <button class="filter-btn" data-filter="aluminum-kitchens">Aluminum Kitchens</button>
+        <button class="filter-btn" data-filter="carpentry-joinery">Carpentry &amp; Joinery</button>
+        <button class="filter-btn" data-filter="steel-fabrication">Steel Fabrication</button>
+        <button class="filter-btn" data-filter="gypsum-painting">Gypsum &amp; Painting</button>
+        <button class="filter-btn" data-filter="trading">Trading</button>
+        <button class="filter-btn" data-filter="construction">Construction</button>
+      </div>
+
+      <!-- Folder-Wise Image Grid -->
+      <div class="showcase-grid" id="showcase-grid">
+        <!-- uPVC Doors & Windows -->
+        <div class="showcase-card" data-category="upvc-doors-windows">
+          <img src="assets/showcase/upvc-doors-windows/01.jpg" alt="uPVC Doors and Windows" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+        <div class="showcase-card" data-category="upvc-doors-windows">
+          <img src="assets/showcase/upvc-doors-windows/02.jpg" alt="uPVC Doors and Windows" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+
+        <!-- Aluminum Doors & Windows -->
+        <div class="showcase-card" data-category="aluminum-doors-windows">
+          <img src="assets/showcase/aluminum-doors-windows/01.jpg" alt="Aluminum Doors and Windows" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+        <div class="showcase-card" data-category="aluminum-doors-windows">
+          <img src="assets/showcase/aluminum-doors-windows/02.jpg" alt="Aluminum Doors and Windows" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+
+        <!-- Aluminum Kitchens -->
+        <div class="showcase-card" data-category="aluminum-kitchens">
+          <img src="assets/showcase/aluminum-kitchens/01.jpg" alt="Aluminum Kitchens" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+        <div class="showcase-card" data-category="aluminum-kitchens">
+          <img src="assets/showcase/aluminum-kitchens/02.jpg" alt="Aluminum Kitchens" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+
+        <!-- Carpentry & Joinery -->
+        <div class="showcase-card" data-category="carpentry-joinery">
+          <img src="assets/showcase/carpentry-joinery/01.jpg" alt="Carpentry and Joinery Works" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+        <div class="showcase-card" data-category="carpentry-joinery">
+          <img src="assets/showcase/carpentry-joinery/02.jpg" alt="Carpentry and Joinery Works" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+
+        <!-- Steel Fabrication -->
+        <div class="showcase-card" data-category="steel-fabrication">
+          <img src="assets/showcase/steel-fabrication/01.jpg" alt="Steel Fabrication Works" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+        <div class="showcase-card" data-category="steel-fabrication">
+          <img src="assets/showcase/steel-fabrication/02.jpg" alt="Steel Fabrication Works" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+
+        <!-- Gypsum & Painting -->
+        <div class="showcase-card" data-category="gypsum-painting">
+          <img src="assets/showcase/gypsum-painting/01.jpg" alt="Gypsum and Painting Works" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+        <div class="showcase-card" data-category="gypsum-painting">
+          <img src="assets/showcase/gypsum-painting/02.jpg" alt="Gypsum and Painting Works" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+
+        <!-- Trading -->
+        <div class="showcase-card" data-category="trading">
+          <img src="assets/showcase/trading/01.jpg" alt="Building Materials Trading" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+        <div class="showcase-card" data-category="trading">
+          <img src="assets/showcase/trading/02.jpg" alt="Building Materials Trading" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+
+        <!-- Construction -->
+        <div class="showcase-card" data-category="construction">
+          <img src="assets/showcase/construction/01.jpg" alt="Construction and Civil Works" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
+        <div class="showcase-card" data-category="construction">
+          <img src="assets/showcase/construction/02.jpg" alt="Construction and Civil Works" loading="lazy" onerror="this.parentElement.remove()">
+        </div>
       </div>
     </div>
   </section>
@@ -165,5 +234,18 @@
     </div>
   </footer>
 
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('#showcase-grid .showcase-card').forEach(card => {
+          card.hidden = (filter !== 'all' && card.dataset.category !== filter);
+        });
+      });
+    });
+  </script>
+
 </body>
-</html>
+</html> 
