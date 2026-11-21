@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us & Vision | Al Maharat Al Alamiya</title>
+  <title>About Us | Al Maharat Al Alamiya</title>
+  <meta name="description" content="Learn about Al Maharat Al Alamiya—established in Qatar in 2012, delivering integrated building materials trading, architectural fabrication, and construction.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Top Utility Bar -->
   <div class="top-bar">
     <div class="container">
       <div>Doha | Al Khor | Al Shamal — Serving All of Qatar</div>
@@ -18,94 +20,106 @@
     </div>
   </div>
 
-  <header>
+  <!-- Main Header -->
+  <header class="site-header">
     <div class="container nav-wrapper">
       <a href="index.html" class="logo-link">
-        <img src="assets/logo.png" alt="Al Maharat Al Alamiya Logo" onerror="this.style.display='none'">
+        <img src="assets/logo.png" alt="Al Maharat Al Alamiya Logo" class="logo-img" onerror="this.style.display='none'">
         <div class="logo-text">
-          <span class="ar">المهارات العالمية</span>
+          <span class="ar" lang="ar" dir="rtl">المهارات العالمية</span>
           <span class="en">Al Maharat Al Alamiya</span>
         </div>
       </a>
+
       <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" class="active">About Us</a></li>
-          <li><a href="services.html">Capabilities & Divisions</a></li>
-          <li><a href="branches.html">Branches</a></li>
+          <li><a href="services.html">Divisions</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="contact.html" class="btn btn-primary">Request a Quote</a></li>
+          <li><a href="https://wa.me/97433713987?text=Hello%20Al%20Maharat%20Al%20Alamiya%20Inquiry" class="btn btn-primary" target="_blank" rel="noopener">Request a Quote</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Page Header -->
   <section class="page-header">
     <div class="container">
       <h1>About Al Maharat Al Alamiya</h1>
-      <p>Building excellence across Qatar through integrated material supply, specialized workshops, and disciplined engineering execution.</p>
+      <p>Building trust, technical precision, and integrated delivery across Qatar's construction and architectural sectors since 2012.</p>
     </div>
   </section>
 
+  <!-- Company Story & Mission/Vision -->
   <section class="section">
     <div class="container">
-      <div class="grid-2" style="align-items: start;">
-        <div>
-          <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">Our Story &amp; Structure</span>
-          <h2 style="font-size: 1.9rem; color: var(--secondary); margin: 8px 0 18px;">Building Excellence Through Integrated Capabilities</h2>
-          <p style="margin-bottom: 16px;">Founded in 2012, <strong>Al Maharat Al Alamiya</strong> has grown into one of Qatar’s most versatile architectural fabrication, trading, and contracting enterprises. Rather than operating as a single-trade contractor, our organization brings together an extensive supply chain, specialized manufacturing workshops, and skilled site installation teams under one roof.</p>
-          <p style="margin-bottom: 16px;">From supplying raw uPVC and aluminum profiles through our branches in the Doha Industrial Area, Al Khor, and Al Shamal, to fabricating custom glass, steel, and wood elements in our dedicated Al Wukair and Industrial Area facilities, we provide developers, main contractors, and private villa owners with a reliable, single-source partner.</p>
-          <p>Our in-house engineering team leverages modern AI-assisted design workflows alongside trusted specialist partners for intricate CNC detailing—ensuring every piece is fabricated, painted, and installed to exacting standards.</p>
+      <div class="grid-2">
+        <div class="card">
+          <span class="card-number">OUR STORY</span>
+          <h2>Over a Decade of Delivery in Qatar</h2>
+          <p>Founded in 2012, Al Maharat Al Alamiya has grown into a multi-disciplinary enterprise serving main contractors, consultants, real estate developers, commercial facilities, and residential clients throughout Qatar.</p>
+          <p style="margin-top: 12px;">By combining regional wholesale trading with dedicated fabrication workshops and site contracting teams, we give clients a single, accountable partner from material selection to final installation.</p>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 24px;">
-          <div class="card" style="border-left: 4px solid var(--primary);">
-            <h3>Our Vision</h3>
-            <p>To be Qatar’s most trusted and comprehensive partner in architectural fabrication, building materials trading, and contracting—recognized for engineering reliability, modern craftsmanship, and seamless project delivery.</p>
-          </div>
-
-          <div class="card" style="border-left: 4px solid var(--secondary);">
-            <h3>Our Mission</h3>
-            <p>To empower our clients with superior building materials, precision-engineered fabrication, and disciplined site execution—combining deep regional industry expertise with modern technology to deliver lasting value on every project.</p>
-          </div>
+        <div class="card">
+          <span class="card-number">VISION &amp; STANDARDS</span>
+          <h2>Unified Quality From Workshop to Site</h2>
+          <p>Our goal is to set a practical, dependable benchmark for architectural fabrication, finishing materials, and execution reliability across Qatar.</p>
+          <ul class="check-list">
+            <li>Direct sourcing and regional distribution across Doha, Al Khor, Al Shamal, and Al Wukair</li>
+            <li>In-house fabrication across aluminum, uPVC, glass, steel, wrought iron, and carpentry</li>
+            <li>Engineering review and modern visualization to align drawings with site realities</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Why Clients Choose Us -->
   <section class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <span class="subtitle">Our Competitive Advantage</span>
-        <h2>Why Choose Al Maharat Al Alamiya</h2>
+        <span class="subtitle">Our Advantage</span>
+        <h2>Why Developers &amp; Contractors Work With Us</h2>
+        <p>Fewer handoffs between suppliers and fabricators mean tighter schedules, clearer accountability, and consistent finishes.</p>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-3">
         <div class="card">
-          <h3>Direct Supply Chain Advantage</h3>
-          <p>Our multi-branch trading network guarantees immediate access to top-grade aluminum, uPVC, and glass materials sourced directly from international manufacturers—eliminating third-party markups and procurement delays.</p>
+          <span class="card-number">01 / SINGLE-SOURCE EXECUTION</span>
+          <h3>Materials + Fabrication + Installation</h3>
+          <p>Source profiles, glass, hardware, or custom-fabricated elements and site execution without juggling disconnected vendors.</p>
         </div>
 
         <div class="card">
-          <h3>Dedicated Specialist Workshops</h3>
-          <p>Purpose-built facilities for metalwork, custom joinery, architectural glazing, and professional spray painting ensure consistent, factory-grade finishes across every deliverable.</p>
+          <span class="card-number">02 / NATIONWIDE REACH</span>
+          <h3>Coverage Across Qatar</h3>
+          <p>Positioned to support projects in Doha, Education City, The Pearl-Qatar, Al Wukair, Al Khor, Al Shamal, and industrial zones.</p>
         </div>
 
         <div class="card">
-          <h3>Engineering-Led Execution</h3>
-          <p>Every project is reviewed by our technical engineering team, utilizing advanced digital and AI-assisted visualization to align architectural designs with client expectations prior to fabrication.</p>
-        </div>
-
-        <div class="card">
-          <h3>Proven Track Record Since 2012</h3>
-          <p>Over fourteen years of continuous operation delivering complex commercial, institutional, industrial, and luxury residential scopes across Qatar—including Qatar Baladiya and Kahramaa compliant handovers.</p>
+          <span class="card-number">03 / PRACTICAL ENGINEERING</span>
+          <h3>Built for Local Conditions</h3>
+          <p>Solutions selected and fabricated for Qatar's climate, durability requirements, and architectural specifications.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Need Materials, Custom Fabrication, or Contracting Support?</h2>
+      <p>Speak directly with our team for quotations, technical specifications, and project coordination.</p>
+      <a href="https://wa.me/97433713987?text=Hello%20Al%20Maharat%20Al%20Alamiya%20Inquiry" class="btn btn-outline" target="_blank" rel="noopener">Message Us on WhatsApp (+974 3371 3987)</a>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -114,25 +128,38 @@
           <p style="font-size: 0.92rem; margin-bottom: 14px;">Integrated architectural fabrication, building materials trading, and construction enterprise serving Qatar since 2012.</p>
           <p style="font-size: 0.9rem;"><strong>Head Office:</strong> Office 31, Building 81, Zone 53, Doha, Qatar</p>
         </div>
+
         <div>
           <h4>Quick Links</h4>
           <ul>
             <li><a href="about.html">About Us &amp; Vision</a></li>
-            <li><a href="services.html">Capabilities &amp; Divisions</a></li>
-            <li><a href="branches.html">Branches &amp; Workshops</a></li>
+            <li><a href="services.html">Divisions</a></li>
             <li><a href="projects.html">Selected Projects</a></li>
             <li><a href="contact.html">Request a Quotation</a></li>
           </ul>
         </div>
+
+        <div>
+          <h4>Workshops &amp; Divisions</h4>
+          <ul>
+            <li><a href="/aluminum-workshop/">Aluminum &amp; uPVC Fabrication Workshop</a></li>
+            <li><a href="/steel-workshop/">Steel &amp; Wrought Iron Workshop</a></li>
+            <li><a href="/carpentry-workshop/">Carpentry &amp; Joinery Workshop</a></li>
+            <li><a href="services.html">Glass Factory, Coatings &amp; Civil Works</a></li>
+          </ul>
+        </div>
+
         <div>
           <h4>Contact Information</h4>
           <ul>
-            <li><strong>Phone / WhatsApp:</strong> <a href="tel:+97433713987">+974 3371 3987</a></li>
+            <li><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/97433713987?text=Hello%20Al%20Maharat%20Al%20Alamiya%20Inquiry" target="_blank" rel="noopener">+974 3371 3987</a></li>
             <li><strong>Email:</strong> <a href="mailto:info@almaharat.qa">info@almaharat.qa</a></li>
             <li><strong>Website:</strong> www.almaharat.qa</li>
+            <li><strong>Hours:</strong> Sat – Thu: 8:00 AM – 6:00 PM</li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <span>&copy; 2026 Al Maharat Al Alamiya. All Rights Reserved.</span>
         <span>Doha &bull; Al Khor &bull; Al Shamal &bull; Al Wukair</span>
