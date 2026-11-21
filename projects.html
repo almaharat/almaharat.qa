@@ -60,7 +60,7 @@
       <div class="section-header">
         <span class="subtitle">Project Showcase</span>
         <h2>Selected Works &amp; Fabrication Highlights</h2>
-        <p>Select a category below to browse completed installations, custom fabrication, and material supply across Qatar.</p>
+        <p>Select a category below to browse completed installations, custom fabrication, and material supply across Qatar. Click any photo to enlarge and zoom in.</p>
       </div>
 
       <!-- Category Filter Tabs -->
@@ -234,6 +234,17 @@
     </div>
   </footer>
 
+  <!-- Full-Screen Lightbox with Zoom -->
+  <div class="lightbox-modal" id="lightbox-modal" hidden role="dialog" aria-modal="true" aria-label="Enlarged project image viewer">
+    <div class="lightbox-controls">
+      <button type="button" class="lightbox-btn" id="lightbox-zoom-btn">Zoom In</button>
+      <button type="button" class="lightbox-btn" id="lightbox-close-btn" aria-label="Close image">✕ Close</button>
+    </div>
+    <div class="lightbox-stage" id="lightbox-stage">
+      <img id="lightbox-img" src="" alt="Enlarged project photo">
+    </div>
+  </div>
+
   <script>
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -245,7 +256,66 @@
         });
       });
     });
+
+    (function () {
+      const modal = document.getElementById('lightbox-modal');
+      const modalImg = document.getElementById('lightbox-img');
+      const stage = document.getElementById('lightbox-stage');
+      const zoomBtn = document.getElementById('lightbox-zoom-btn');
+      const closeBtn = document.getElementById('lightbox-close-btn');
+
+      function setZoom(zoomed) {
+        modalImg.classList.toggle('zoomed', zoomed);
+        zoomBtn.textContent = zoomed ? 'Reset Zoom' : 'Zoom In';
+        if (!zoomed) {
+          stage.scrollTop = 0;
+          stage.scrollLeft = 0;
+        }
+      }
+
+      function openLightbox(imgEl) {
+        modalImg.src = imgEl.currentSrc || imgEl.src;
+        modalImg.alt = imgEl.alt || 'Project showcase photo';
+        setZoom(false);
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        modal.hidden = true;
+        modalImg.src = '';
+        setZoom(false);
+        document.body.style.overflow = '';
+      }
+
+      document.getElementById('showcase-grid').addEventListener('click', (e) => {
+        const card = e.target.closest('.showcase-card');
+        if (!card) return;
+        const img = card.querySelector('img');
+        if (img && img.src) openLightbox(img);
+      });
+
+      modalImg.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setZoom(!modalImg.classList.contains('zoomed'));
+      });
+
+      zoomBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setZoom(!modalImg.classList.contains('zoomed'));
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target === stage) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!modal.hidden && e.key === 'Escape') closeLightbox();
+      });
+    })();
   </script>
 
 </body>
-</html> 
+</html>
