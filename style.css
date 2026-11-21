@@ -482,6 +482,38 @@ nav ul li a.active {
   transform: scale(1.04);
 }
 
+/* Project Showcase Category Filter Tabs */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.filter-btn {
+  padding: 9px 18px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+.showcase-card[hidden] {
+  display: none;
+}
+
 /* Clean Client & Project Name + Location List */
 .roster-list {
   background: var(--white);
