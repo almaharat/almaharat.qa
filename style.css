@@ -87,15 +87,19 @@ header {
 }
 
 .logo-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 14px;
+  text-decoration: none;
+  padding: 4px 0;
 }
 
-.logo-link img {
-  height: 64px;
+.logo-img {
+  height: 76px;
   width: auto;
+  max-height: 85px;
   object-fit: contain;
+  display: block;
 }
 
 .logo-text {
@@ -673,5 +677,11 @@ footer ul li a:hover {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    height: 54px;
   }
 }
