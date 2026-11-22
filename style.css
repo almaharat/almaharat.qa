@@ -351,6 +351,13 @@ nav ul li a.btn:hover {
   font-size: 1.05rem;
 }
 
+.section-header .authenticity-note {
+  margin-top: 10px;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
