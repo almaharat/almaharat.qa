@@ -283,15 +283,17 @@
     </div>
   </footer>
 
-  <!-- Full-Screen Lightbox with Zoom -->
+  <!-- Full-Screen Lightbox with Zoom & Prev/Next -->
   <div class="lightbox-modal" id="lightbox-modal" hidden role="dialog" aria-modal="true" aria-label="Enlarged project image viewer">
     <div class="lightbox-controls">
       <button type="button" class="lightbox-btn" id="lightbox-zoom-btn">Zoom In</button>
       <button type="button" class="lightbox-btn" id="lightbox-close-btn" aria-label="Close image">✕ Close</button>
     </div>
+    <button type="button" class="lightbox-nav prev" id="lightbox-prev-btn" aria-label="Previous image">‹</button>
     <div class="lightbox-stage" id="lightbox-stage">
       <img id="lightbox-img" src="" alt="Enlarged project photo">
     </div>
+    <button type="button" class="lightbox-nav next" id="lightbox-next-btn" aria-label="Next image">›</button>
   </div>
 
   <script>
@@ -312,6 +314,16 @@
       const stage = document.getElementById('lightbox-stage');
       const zoomBtn = document.getElementById('lightbox-zoom-btn');
       const closeBtn = document.getElementById('lightbox-close-btn');
+      const prevBtn = document.getElementById('lightbox-prev-btn');
+      const nextBtn = document.getElementById('lightbox-next-btn');
+
+      let visibleCards = [];
+      let currentIndex = -1;
+
+      function getVisibleCards() {
+        return Array.from(document.querySelectorAll('#showcase-grid .showcase-card'))
+          .filter(card => !card.hidden && card.querySelector('img') && card.querySelector('img').getAttribute('src'));
+      }
 
       function setZoom(zoomed) {
         modalImg.classList.toggle('zoomed', zoomed);
@@ -322,10 +334,24 @@
         }
       }
 
-      function openLightbox(imgEl) {
+      function showAtIndex(index) {
+        visibleCards = getVisibleCards();
+        if (!visibleCards.length) return;
+        currentIndex = (index + visibleCards.length) % visibleCards.length;
+        const imgEl = visibleCards[currentIndex].querySelector('img');
         modalImg.src = imgEl.currentSrc || imgEl.src;
         modalImg.alt = imgEl.alt || 'Project showcase photo';
         setZoom(false);
+        const showArrows = visibleCards.length > 1;
+        prevBtn.style.display = showArrows ? '' : 'none';
+        nextBtn.style.display = showArrows ? '' : 'none';
+      }
+
+      function openLightbox(cardEl) {
+        visibleCards = getVisibleCards();
+        const idx = visibleCards.indexOf(cardEl);
+        currentIndex = idx >= 0 ? idx : 0;
+        showAtIndex(currentIndex);
         modal.hidden = false;
         document.body.style.overflow = 'hidden';
       }
@@ -333,15 +359,26 @@
       function closeLightbox() {
         modal.hidden = true;
         modalImg.src = '';
+        currentIndex = -1;
         setZoom(false);
         document.body.style.overflow = '';
       }
 
       document.getElementById('showcase-grid').addEventListener('click', (e) => {
         const card = e.target.closest('.showcase-card');
-        if (!card) return;
+        if (!card || card.hidden) return;
         const img = card.querySelector('img');
-        if (img && img.src) openLightbox(img);
+        if (img && img.src) openLightbox(card);
+      });
+
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showAtIndex(currentIndex - 1);
+      });
+
+      nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showAtIndex(currentIndex + 1);
       });
 
       modalImg.addEventListener('click', (e) => {
@@ -361,7 +398,10 @@
       });
 
       document.addEventListener('keydown', (e) => {
-        if (!modal.hidden && e.key === 'Escape') closeLightbox();
+        if (modal.hidden) return;
+        if (e.key === 'Escape') closeLightbox();
+        else if (e.key === 'ArrowLeft') showAtIndex(currentIndex - 1);
+        else if (e.key === 'ArrowRight') showAtIndex(currentIndex + 1);
       });
     })();
   </script>

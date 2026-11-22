@@ -553,6 +553,55 @@ nav ul li a.btn:hover {
   color: var(--white);
 }
 
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--secondary);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.lightbox-nav:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.lightbox-nav.prev {
+  left: 20px;
+}
+
+.lightbox-nav.next {
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .lightbox-nav {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+
+  .lightbox-nav.prev {
+    left: 10px;
+  }
+
+  .lightbox-nav.next {
+    right: 10px;
+  }
+}
+
 /* Client Directory Table */
 .client-table-wrapper {
   overflow-x: auto;
